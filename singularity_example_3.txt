@@ -12,7 +12,9 @@ From: pavel-demin/singularity-ubuntu:1804
 
     # Don't use exec
     echo "Do not use exec"
-    exec echo "Do not use exec"
+    exec echo "Can use exec"
+    /usr/games/cowsay hello
+    cowsay hello
 
 %post
 
