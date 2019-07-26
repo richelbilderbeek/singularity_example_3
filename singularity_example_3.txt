@@ -2,6 +2,16 @@ Bootstrap: shub
 
 From: pavel-demin/singularity-ubuntu:1804
 
+%runscript
+
+    exec echo "The runscript is the containers default runtime command!"
+
+    cowsay "It worked without setting the path!"
+
+    export PATH=/usr/bin:/bin:/usr/games
+
+    cowsay "It worked with setting the path!"
+
 %post
 
     apt-get update && apt-get -y install cowsay
