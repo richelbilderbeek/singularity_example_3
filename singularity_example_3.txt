@@ -8,7 +8,11 @@ From: pavel-demin/singularity-ubuntu:1804
 
     echo "Arguments received: $*"
 
-    exec echo "$@"
+    echo "$@"
+
+    # Don't use exec
+    echo "Do not use exec"
+    exec echo "Do not use exec"
 
 %post
 
