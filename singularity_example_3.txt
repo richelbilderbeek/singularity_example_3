@@ -4,13 +4,11 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %runscript
 
-    exec echo "The runscript is the containers default runtime command!"
+    echo "Rooooar!"
 
-    cowsay "It worked without setting the path!"
+    echo "Arguments received: $*"
 
-    export PATH=/usr/bin:/bin:/usr/games
-
-    cowsay "It worked with setting the path!"
+    exec echo "$@"
 
 %post
 
