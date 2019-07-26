@@ -13,8 +13,12 @@ From: pavel-demin/singularity-ubuntu:1804
     # Don't use exec
     echo "Do not use exec"
     exec echo "Can use exec"
+    #apt search cowsay
+    #which cowsay
     /usr/games/cowsay hello
     cowsay hello
+
+    echo "End of runscript"
 
 %post
 
