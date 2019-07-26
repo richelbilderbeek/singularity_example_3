@@ -1,0 +1,31 @@
+language: generic
+dist: xenial
+cache: packages
+
+addons: 
+  apt: 
+    packages: 
+      - libarchive-dev
+      #Cannot: added since yakkety :-(
+      #- singularity-container
+
+install:
+  # Check dead links
+  - sudo apt-get install -qq npm
+  - npm config set strict-ssl false
+  - sudo npm install -g markdown-link-check
+  # Check dead links before singularity installs itself
+  - rm .travis.yml
+  - ./scripts/check_dead_links
+  # Singularity
+  - sudo ./install_singularity
+
+script:
+  # Show the location
+  - which singularity
+  # Show the singularity version
+  - singularity --version
+  # Build an image, must use sudo
+  - sudo ./script
+  # Run the container
+  - ./ubuntu_cowsay.simg
