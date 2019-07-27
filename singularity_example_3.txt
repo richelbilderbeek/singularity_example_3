@@ -5,7 +5,6 @@ From: pavel-demin/singularity-ubuntu:1804
 %runscript
 
     cowsay "cowsay works!"
-    echo $PATH | cowsay -f stegosaurus
 
 %environment
 
