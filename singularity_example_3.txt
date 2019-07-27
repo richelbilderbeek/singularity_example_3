@@ -4,24 +4,9 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %runscript
 
-    echo "Rooooar!"
-
-    echo "Arguments received: $*"
-
-    echo "$@"
-
-    # Don't use exec
-    echo "Do not use exec"
-    echo "Can use exec"
-    apt search cowsay
-    which cowsay
-    /usr/games/cowsay hello
     export PATH=/usr/bin:/bin:/usr/games
-    cowsay hello
-    echo "End of runscript"
+    cowsay "cowsay works!"
 
 %post
 
     apt-get update && apt-get -y install cowsay
-
-    echo "The post section is where you can install, and configure your container."
