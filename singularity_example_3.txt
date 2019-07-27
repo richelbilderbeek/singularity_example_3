@@ -10,13 +10,12 @@ From: pavel-demin/singularity-ubuntu:1804
 %environment
 
     export PATH=/usr/bin:/bin:/usr/games
-    export LC_CTYPE=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8
 
 %post
 
     apt-get update
     apt-get --yes install cowsay
+    locale-gen
 
 %labels
 
