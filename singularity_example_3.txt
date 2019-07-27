@@ -4,7 +4,6 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %runscript
 
-    sudo locale-gen en_US.UTF-8
     cowsay "cowsay works!"
     echo $PATH | cowsay -f stegosaurus
 
@@ -17,6 +16,7 @@ From: pavel-demin/singularity-ubuntu:1804
     apt-get update
     apt-get --yes install cowsay
     apt-get --yes install locales
+    locale-gen en_US.UTF-8
 
 %labels
 
