@@ -13,7 +13,7 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %labels
 
-    AUTHOR Richel J.C. Bilderbeek
+    AUTHOR Richèl J.C. Bilderbeek
 
     NAME singularity_example_3
  
