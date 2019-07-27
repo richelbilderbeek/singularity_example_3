@@ -12,3 +12,15 @@ From: pavel-demin/singularity-ubuntu:1804
 %post
 
     apt-get update && apt-get -y install cowsay
+
+%labels
+
+    name singularity_example_3
+ 
+    description Singularity example 3: Singularity 2.5, Ubuntu 18.4 and cowsay
+
+    usage run the container
+
+    url https://github.com/richelbilderbeek/singularity_example_3
+
+    version 1.0
