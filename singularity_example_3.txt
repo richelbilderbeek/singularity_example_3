@@ -4,9 +4,7 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %runscript
 
-    echo $PATH
-    export PATH=$PATH:/bin:/usr/games
-    echo $PATH
+    export PATH=/usr/bin:/bin:/usr/games
     cowsay "cowsay works!"
 
 %post
