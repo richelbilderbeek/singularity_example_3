@@ -4,7 +4,7 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %runscript
 
-    locale
+    sudo locale-gen en_US.UTF-8
     cowsay "cowsay works!"
     echo $PATH | cowsay -f stegosaurus
 
