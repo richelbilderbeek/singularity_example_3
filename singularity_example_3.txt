@@ -16,7 +16,7 @@ From: pavel-demin/singularity-ubuntu:1804
 
     apt-get update
     apt-get --yes install cowsay
-    apt-get --yes install locale
+    apt-get --yes install locales
 
 %labels
 
