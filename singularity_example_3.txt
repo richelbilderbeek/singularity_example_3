@@ -9,7 +9,8 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %post
 
-    apt-get update && apt-get -y install cowsay
+    apt-get update
+    apt-get --yes install cowsay
 
 %labels
 
