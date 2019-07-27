@@ -9,7 +9,7 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %environment
 
-    PATH=/opt/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/bin:/usr/games
+    PATH=$PATH:/bin:/usr/games
 
 %post
 
