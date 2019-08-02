@@ -22,7 +22,7 @@ From: richelbilderbeek/default/ubuntu_disco:ubuntu
 
     NAME singularity_example_3
  
-    DESCRIPTION Singularity example 3: Singularity 2.5, Ubuntu 18.4 and cowsay
+    DESCRIPTION Singularity example 3: Singularity 2.5, Ubuntu 19.4 and cowsay
 
     USAGE simply run the container
 
