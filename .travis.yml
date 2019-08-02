@@ -22,9 +22,9 @@ install:
 
 script:
   # Build the container
-  - sudo singularity build singularity_example_5.sif singularity_example_5.def
+  - sudo singularity build singularity_example_3.sif singularity_example_3.def
   # Run the container
-  - ./singularity_example_5.sif
+  - ./singularity_example_3.sif
   # Check dead links
   - rm -f *.sif
   - rm *.tar.gz
