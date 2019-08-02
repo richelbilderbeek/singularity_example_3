@@ -2,30 +2,31 @@ language: generic
 dist: bionic
 cache: packages
 
-addons: 
-  apt: 
-    packages: 
-      - libarchive-dev
-      #Cannot: added since yakkety :-(
-      #- singularity-container
-
 install:
+  # Go, from https://tecadmin.net/install-go-on-ubuntu/
+  - wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+  - sudo tar -xf go1.12.7.linux-amd64.tar.gz
+  - sudo mv go /usr/local
+  - export GOROOT=/usr/local/go
+  - export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
   # Check dead links
   - sudo apt-get install -qq npm
   - npm config set strict-ssl false
   - sudo npm install -g markdown-link-check
-  # Check dead links before singularity installs itself
-  - rm .travis.yml
-  - ./scripts/check_dead_links
   # Singularity
+  - sudo ./install_dependencies
+  - go version
+  - which go
   - sudo ./install_singularity
+  - singularity --version
 
 script:
-  # Show the location
-  - which singularity
-  # Show the singularity version
-  - singularity --version
-  # Build an image, must use sudo
-  - sudo ./script
+  # Build the container
+  - sudo singularity build singularity_example_5.sif singularity_example_5.def
   # Run the container
-  - ./ubuntu_cowsay.simg
+  - ./singularity_example_5.sif
+  # Check dead links
+  - rm -f *.sif
+  - rm *.tar.gz
+  - rm -rf singularity
+  - ./scripts/check_dead_links || true

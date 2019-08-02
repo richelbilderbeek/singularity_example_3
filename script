@@ -1,9 +1,0 @@
-#!/bin/bash
-# Works
-# singularity pull shub://pavel-demin/singularity-ubuntu:1804
-
-sudo singularity build ubuntu_cowsay.simg singularity_example_3.txt
-
-## Scribbles
-##singularity pull shub://pavel-demin/singularity-ubuntu:1804
-##sudo singularity build ubuntu.simg Singularity# pavel-demin-singularity-ubuntu-master-1804.simg
