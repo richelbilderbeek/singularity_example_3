@@ -11,9 +11,11 @@ From: richelbilderbeek/default/ubuntu_disco:ubuntu
 
 %post
 
+   apt-get update && apt-get install -y wget
+
     apt-get update
-    apt-get --yes install cowsay
-    apt-get --yes install locales
+    apt-get install --yes cowsay
+    apt-get install --yes locales
     locale-gen en_US.UTF-8
 
 %labels
