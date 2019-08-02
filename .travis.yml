@@ -27,6 +27,6 @@ script:
   - ./singularity_example_3.sif
   # Check dead links
   - rm -f *.sif
-  - rm *.tar.gz
+  - rm -f *.tar.gz
   - rm -rf singularity
   - ./scripts/check_dead_links || true
