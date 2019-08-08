@@ -1,6 +1,5 @@
-Bootstrap: shub
-
-From: pavel-demin/singularity-ubuntu:1804
+BootStrap: library
+From: richelbilderbeek/default/ubuntu_disco:ubuntu 
 
 %runscript
 
@@ -12,9 +11,11 @@ From: pavel-demin/singularity-ubuntu:1804
 
 %post
 
+   apt-get update && apt-get install -y wget
+
     apt-get update
-    apt-get --yes install cowsay
-    apt-get --yes install locales
+    apt-get install --yes cowsay
+    apt-get install --yes locales
     locale-gen en_US.UTF-8
 
 %labels
@@ -23,7 +24,7 @@ From: pavel-demin/singularity-ubuntu:1804
 
     NAME singularity_example_3
  
-    DESCRIPTION Singularity example 3: Singularity 2.5, Ubuntu 18.4 and cowsay
+    DESCRIPTION Singularity example 3: Singularity 2.5, Ubuntu 19.4 and cowsay
 
     USAGE simply run the container
 

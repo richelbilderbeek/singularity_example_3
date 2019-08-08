@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo singularity build ubuntu_cowsay.sif singularity_example_3.def
+
+#sudo singularity build --sandbox ubuntu_cowsay.sif singularity_example_3.def
+
+#sudo singularity --debug build ubuntu_cowsay.sif singularity_example_3.def
