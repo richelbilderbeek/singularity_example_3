@@ -1,5 +1,5 @@
 BootStrap: library
-From: ubuntu:19.04
+From: ubuntu:18.10
 
 %runscript
 
