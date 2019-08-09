@@ -28,5 +28,5 @@ script:
   # Check dead links
   - rm -f *.sif
   - rm -f *.tar.gz
-  - rm -rf singularity
+  - sudo rm -rf singularity
   - ./scripts/check_dead_links || true
