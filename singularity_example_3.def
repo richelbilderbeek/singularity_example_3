@@ -22,7 +22,7 @@ From: ubuntu:18.10
 
     NAME singularity_example_3
  
-    DESCRIPTION Singularity example 3: Singularity 3.2.1, Ubuntu 16.04 and cowsay
+    DESCRIPTION Singularity example 3: Singularity 3.2.1, Ubuntu 18.10 and cowsay
 
     USAGE simply run the container
 
