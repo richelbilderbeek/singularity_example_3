@@ -1,5 +1,5 @@
 BootStrap: library
-From: richelbilderbeek/default/ubuntu_disco:ubuntu 
+From: ubuntu:18.10
 
 %runscript
 
@@ -7,13 +7,11 @@ From: richelbilderbeek/default/ubuntu_disco:ubuntu
 
 %environment
 
-    PATH=$PATH:/bin:/usr/games
+    export PATH=/usr/games:$PATH
 
 %post
 
-   apt-get update && apt-get install -y wget
-
-    apt-get update
+    apt-get update 
     apt-get install --yes cowsay
     apt-get install --yes locales
     locale-gen en_US.UTF-8
@@ -24,7 +22,7 @@ From: richelbilderbeek/default/ubuntu_disco:ubuntu
 
     NAME singularity_example_3
  
-    DESCRIPTION Singularity example 3: Singularity 2.5, Ubuntu 19.4 and cowsay
+    DESCRIPTION Singularity example 3: Singularity 3.2.1, Ubuntu 16.04 and cowsay
 
     USAGE simply run the container
 
